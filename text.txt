@@ -1,0 +1,35 @@
+  
+from flask import Flask,  render_template
+abi=Flask(__name__)
+@abi.route('/index.html')
+def a():
+    return render_template('index.html')
+if __name__ == "__main__":
+    abi.run(debug=True,host='0.0.0.0')
+
+
+
+Step 1: Installing flask in the host
+step 2: creating pyhon flask from python code
+           1.importing flask
+           2.assaining flask modul to perticular variable
+           3.setting the path for application (index file) to open in browser
+           4.definning the function setting up the result by reuturn function
+           5.comparing the string (by default __name__ shows the default name of the python file )
+           6.run python flask & to debug automatically
+step3:  creating the Dockerfile for python flask
+           1.building the image-: docker build -t img1 . or(-f path of Dockerfile)
+           2.creating the container:- docker run -itd --name c1 -p 5001:5000 img1(itd - itractive terminal dettached mode)
+step4:  writing HTML code linking with css &  python code.
+
+            
+                    Dockerfile for containarizing python_flask
+
+FROM alpine:latest                               #pulling the alpine image from registory
+RUN apk add --no-cache python3 py3-pip           #upgrading & installing pyhon 
+COPY . .                                         #copy all files to current folder
+RUN pip3 install -r requir.txt                   #installing flask & jinjo template
+EXPOSE 5000                                      #mapping the port to port
+ENTRYPOINT ["python3"]                           #cmd will overwrite the entry point & will execute when container start
+CMD ["a.py"]
+
