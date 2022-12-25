@@ -6,3 +6,9 @@ EXPOSE 5000                                      #mapping the port to port
 ENTRYPOINT ["python3"]                           #cmd will overwrite the entry point & will execute when container start
 CMD ["a.py"]
 
+
+biulding an image
+docker build -t myimg .
+
+creating the container
+docker run -itd --name c3 -p 7000:5000 myimg 
