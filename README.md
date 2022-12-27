@@ -1,5 +1,5 @@
 step 1 
-creating pyhon code for "Hello GUVI GEEK"
+creating python code for "Hello GUVI GEEK"
 step 2
 creating Dockerfile for containarizing the python code
 step 3
