@@ -17,7 +17,7 @@ step 2: creating pyhon flask from python code
            4.definning the function setting up the result by reuturn function
            5.comparing the string (by default __name__ shows the default name of the python file )
            6.run python flask & to debug automatically
-step3:  creating the Dockerfile for python flask
+step3:  creating the Dockerfile & containarizing the  python flask
       
 
 
